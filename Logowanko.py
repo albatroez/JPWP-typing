@@ -26,7 +26,7 @@ def check_password(failures=[]):
 
     if (userEntry.get(), passwordEntry.get()) in passwords:
         root.destroy()
-        os.system('python tk_test.py')
+        os.system('python Typing.py')
         return #otwarcie okienka z apka
     else:
         userEntry.delete(0, 'end')
@@ -55,7 +55,7 @@ def zapomniales():
 
 
 def openRejestr():
-    root.destroy()
+    #root.destroy()
     os.system('python Rejestracja.py')
 
 
