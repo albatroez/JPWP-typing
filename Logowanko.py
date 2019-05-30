@@ -61,7 +61,7 @@ def openRejestr():
 
 
 root = tk.Tk()
-root.geometry('300x230')
+root.geometry('300x300')
 root.title('Enter your information')
 # frame for window margin
 parent = tk.Frame(root, padx=10, pady=10)
