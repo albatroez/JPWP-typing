@@ -3,7 +3,6 @@ import tkinter as tk
 import os
 
 failure_max = 3
-
 passwords = [('DaniWeb', 'best1'), ('newbie', 'help!help!'), ('student', 'student')]
 
 
@@ -55,7 +54,7 @@ def zapomniales():
 
 
 def openRejestr():
-    #root.destroy()
+    root.destroy()
     os.system('python Rejestracja.py')
 
 
