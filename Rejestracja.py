@@ -13,7 +13,7 @@ def send_email():
         email_password = "123QWEqwe"
         msg['From'] = "fast_typing@op.pl"
         msg['To'] = email.get()
-        msg['Subject'] = "REJESTRACJA MORDO"
+        msg['Subject'] = "REJESTRACJA MORDO"   #lalalal
         msg.attach(MIMEText(message, 'plain'))
         server = smtplib.SMTP('smtp.op.pl: 587')
         server.starttls()
