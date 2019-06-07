@@ -1,36 +1,4 @@
-import tkinter as tk
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-import smtplib
-import tkinter.messagebox
-
-
-def send_email():
-    if "@" and "." in email.get():
-        msg = MIMEMultipart()
-        message = "ELO"
-        # lipa ze haslo jest w kodzie
-        email_password = "123QWEqwe"
-        msg['From'] = "fast_typing@op.pl"
-        msg['To'] = email.get()
-        msg['Subject'] = "REJESTRACJA MORDO"   #lalalal
-        msg.attach(MIMEText(message, 'plain'))
-        server = smtplib.SMTP('smtp.op.pl: 587')
-        server.starttls()
-        server.login(msg['From'], email_password)
-        server.sendmail(msg['From'], msg['To'], msg.as_string())
-        server.quit()
-    else:
-        tk.messagebox.showinfo('BŁĄD', 'Niepoprawny mail')
-
-
-def makeEntry(parent, caption, width=None, **options):
-    tk.Label(parent, text=caption).pack(side=tk.TOP, anchor='w', expand=True)
-    entry = tk.Entry(parent, **options)
-    if width:
-        entry.config(width=width)
-    entry.pack(side=tk.TOP, anchor='w', fill=tk.BOTH)
-    return entry
+from Dane import *
 
 
 def make_title(root, caption, size):

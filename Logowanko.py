@@ -1,18 +1,4 @@
-import tkinter.messagebox
-import tkinter as tk
-import os
-
-failure_max = 3
-passwords = [('DaniWeb', 'best1'), ('newbie', 'help!help!'), ('student', 'student')]
-
-
-def makeEntry(parent, caption, width=None, **options):
-    tk.Label(parent, text=caption).pack(side=tk.TOP, anchor='w', expand=True)
-    entry = tk.Entry(parent, **options)
-    if width:
-        entry.config(width=width)
-    entry.pack(side=tk.TOP, anchor='w', fill=tk.BOTH)
-    return entry
+from Dane import *
 
 
 def enter(event):
@@ -41,13 +27,11 @@ def check_password(failures=[]):
             print('wysylanie maila')
 
 
-
-
 def zapomniales():
     o = tk.Tk()
     o.title('Przypominanie maila')
     mailEntry = makeEntry(o, "Prosze o wpisanie maila", 24)
-    sendButton = tk.Button(o, text="Send", command=o.destroy) #Jak bedzie to wysylanie maila z przypomnieniem
+    sendButton = tk.Button(o, text="Send", command=o.destroy()) #Jak bedzie to wysylanie maila z przypomnieniem
     mailEntry.pack()
     sendButton.pack(side=tk.BOTTOM)
     o.mainloop()
@@ -60,7 +44,7 @@ def openRejestr():
 
 
 root = tk.Tk()
-root.geometry('300x300')
+root.geometry('300x240')
 root.title('Enter your information')
 # frame for window margin
 parent = tk.Frame(root, padx=10, pady=10)
