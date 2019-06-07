@@ -5,6 +5,9 @@ import smtplib
 import keyboard
 
 # Zadanie 1
+'''
+Stwórz okno rejestracji o dowolnym wygladzie, posiadajace przycisk do wysłania maila
+'''
 def make_register_window():
     pass# miejsce na kod
                                                                   #sciaga:
@@ -14,22 +17,19 @@ def make_register_window():
 
 
 # Zadanie 2
+'''
+Napisz funkcje umozliwiajaca wyslanie maila i przypisz ja do przycisku w oknie,
+ktore zostalo napisane w poprzednim zadaniu
+'''
 def send_email():
     try:
          msg = MIMEMultipart()
          message = "Tu wpisz wiadomosc mailowa"
-         msg['From'] = ''
-         msg['To'] = ''
-         msg['Subject'] = ''
-         email_password = ''
+         # zadeklaruj wlasnosci maila (nadawce odbiorce haslo)
          msg.attach(MIMEText(message, 'plain'))
-         server = smtplib.SMTP('smtp. wpisz server z którego wysyłasz maila i port')
-         server.starttls()
-         server.login("TU ZALOGUJ SIE DO MAILA Z KTOREGO WYSYLASZ")
-         server.sendmail("OD , DO")
-         server.quit()
+         # zadeklaruj własnosci servera
     except:
-        tk.messagebox.showinfo('BLAD', 'Niepoprawny mail lub hasło')
+         tk.messagebox.showinfo('BLAD', 'Niepoprawny mail')
 
 # Zadanie 3
 '''
@@ -64,8 +64,8 @@ def check_pattern():
 
 
 if __name__ == '__main__':
-    kmiot = tk.Tk()
+    root = tk.Tk()
     entry1 = make_register_window()
     #entry1.pack()
     #typing()
-    kmiot.mainloop()
+    root.mainloop()
