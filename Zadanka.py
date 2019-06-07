@@ -55,7 +55,14 @@ def typing():
 Napisz funkcję, która utworzy dwa obiekty tk.Label. Jeden z danym tekstem - wzorcem, a drugi aktualizowany przez
 tk.StringVar (użyj argumentu textvariable w tk.Label). Następnie korzystając z keyboarda, podobnie
 jak w poprzednim zadaniu wychwytuj wciśnięte klawisze, ale wypisuj tylko te, które zgadzają się ze wzorcem.
+Skorzystaj z metody tk.StringVar.set()
 '''
+def check_pattern():
+    pattern = ''
+    text = tk.StringVar()
+
+
+
 if __name__ == '__main__':
     kmiot = tk.Tk()
     entry1 = make_register_window()
