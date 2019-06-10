@@ -36,6 +36,7 @@ def typing(key):
         pass
     else:
         errors += 1
+        errors_var.set(f'Number of errors: {errors}')
         text_label.config(bg="red")
     if counter >= len(pattern):
         unhook()
@@ -46,8 +47,11 @@ def hook():
     sw.Start()                                          #kontrola stopwatcha
     global counter
     global pattern
+    global errors
     counter = 0
     pattern = box.get('1.0', 'end-1c')                  #zaciągnięcie tekstu z pola
+    errors = 0
+    errors_var.set(f'Number of errors: {errors}')
     box.config(state=tk.DISABLED)
     keyboard.on_press(typing)
     text.set("GO!")
@@ -70,6 +74,7 @@ errors = 0
 counter = 0
 pattern = ""
 text = tk.StringVar()
+errors_var = tk.StringVar()
 text_label = tk.Label(root, textvariable=text, bg="green")
 text_label.pack()
 start = tk.Button(root, text="Start", command=hook)
@@ -81,5 +86,7 @@ box.pack()
 words_var = tk.StringVar()
 wpm = tk.Label(root, textvariable=words_var)
 wpm.pack(side='bottom')
+error_label = tk.Label(root, textvariable=errors_var)
+error_label.pack()
 
 root.mainloop()
