@@ -13,7 +13,7 @@ class StopWatch(tk.Frame):
 
     def makeWidgets(self):
         """ Make the time label. """
-        l = tk.Label(self, textvariable=self.timestr)
+        l = tk.Label(self, textvariable=self.timestr, font=22)
         self._setTime(self._elapsedtime)
         l.pack(fill="x", expand="NO", pady=2, padx=2)
 

@@ -75,7 +75,7 @@ counter = 0
 pattern = ""
 text = tk.StringVar()
 errors_var = tk.StringVar()
-text_label = tk.Label(root, textvariable=text, bg="green", font = 22)
+text_label = tk.Label(root, textvariable=text, bg="green", font = 26)
 text_label.pack()
 start = tk.Button(root, text="Start", command=hook)
 stop = tk.Button(root, text="Stop", command=unhook)
