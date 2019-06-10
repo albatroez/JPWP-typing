@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
@@ -29,7 +30,7 @@ def send_email():
          msg.attach(MIMEText(message, 'plain'))
          # zadeklaruj własnosci servera
     except:
-         tk.messagebox.showinfo('BLAD', 'Niepoprawny mail')
+         messagebox.showinfo('BLAD', 'Niepoprawny mail')
 
 # Zadanie 3
 '''
@@ -67,5 +68,4 @@ if __name__ == '__main__':
     root = tk.Tk()
     entry1 = make_register_window()
     #entry1.pack()
-    #typing()
     root.mainloop()
