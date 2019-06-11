@@ -20,7 +20,8 @@ def make_register_window():
 # Zadanie 2
 '''
 Napisz funkcje umozliwiajaca wyslanie maila i przypisz ja do przycisku w oknie,
-ktore zostalo napisane w poprzednim zadaniu
+ktore zostalo napisane w poprzednim zadaniu pomocne źródło:
+https://www.pythonforbeginners.com/code-snippets-source-code/using-python-to-send-email/?fbclid=IwAR0qQXPr5BZzRg2TnuntXYQfRK2lcnk3qdvjW1gT1DfltT1kPP2F9pw2pqg
 '''
 def send_email():
     try:
